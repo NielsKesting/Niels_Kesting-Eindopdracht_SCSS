@@ -1,0 +1,11 @@
+.pictureGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 50px 50px;
+      grid-template-columns: 50px 50px 50px;
+}
+
+.gridPicture {
+  width: 50px;
+}
+/*# sourceMappingURL=pictureGrid.css.map */

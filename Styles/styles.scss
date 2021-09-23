@@ -1,0 +1,35 @@
+body{
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #c3cfe2;
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    grid-template-areas:
+    " . te . " 
+    " . gr . ";
+
+    .testimonial{ grid-area: te;}
+    .pictureGrid{ grid-area: gr;}
+    .buttonGrid{ grid-area: gr;}
+    }
+
+@media (min-width: 1080px){
+    body{
+        display: grid;
+        grid-template-columns: 50px auto 50px auto 50px;
+        grid-template-areas:
+        " . te . gr . " ;
+    
+        .testimonial{ grid-area: te;}
+        .pictureGrid{ grid-area: gr;}
+        .buttonGrid{ grid-area: gr;}
+    }
+}
+
+$whiteBackground: #fff;
+$blue: #686de0;
+
+@import "./testimonial";
+@import "./pictureGrid";
+@import "./socials";

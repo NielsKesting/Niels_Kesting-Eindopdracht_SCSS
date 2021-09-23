@@ -1,0 +1,74 @@
+// Animation
+@mixin socialStyle{
+    width: 220px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    animation-name: colapse;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+@mixin expand{
+    animation-name: expand;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+    @keyframes expand{
+        from{transform: translateX(0px)}
+        to{ transform: translateX(-192px)}
+    }
+    @keyframes colapse{
+        from{ transform: translateX(-192px)}
+        to{ transform: translateX(0px)}
+    }
+
+// Position & overall style
+.socials{
+    position: absolute;
+    right: -192px;
+}
+    .socials img{
+        width: 30px;
+        height: 30px;
+    }
+    .socials a{
+        text-decoration: none;
+        color: white;
+        margin: 7px 0px 0px 20px;
+    }
+        .socials a:hover{
+            text-decoration: underline;
+        }
+
+// Individual button style
+.twitter{
+    @include socialStyle;
+    background-color: #00aced;
+}
+    .twitter:hover{
+        @include expand;
+    }
+
+.linkedin{
+    @include socialStyle;
+    background-color: #007bb6;
+}
+    .linkedin:hover{
+        @include expand;
+    }
+
+.facebook{
+    @include socialStyle;
+    background-color: #3b5998; 
+}
+    .facebook:hover{
+        @include expand;
+    }
+
+.github{
+    @include socialStyle;
+    background-color: #333;
+}
+    .github:hover{
+        @include expand;
+    }

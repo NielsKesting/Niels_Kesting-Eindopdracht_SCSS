@@ -1,0 +1,91 @@
+// Image size
+$pictureSizePhone: 410px;
+$pictureSizeTablet: 40vw;
+$pictureSizeDesktop: 20vw;
+
+
+// Button animation
+.buttonGrid div{
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: off;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+    .buttonGrid > :hover{
+        animation-name: on;
+        animation-duration: 300ms;
+        animation-fill-mode: forwards;
+    }
+
+
+@keyframes on{
+    from{ opacity: 0;}
+    to{ opacity: 100;}
+}
+@keyframes off{
+    from{ opacity: 100;}
+    to{ opacity: 0;}
+}
+
+// Layout
+@mixin grid{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;}
+
+.pictureGrid{
+    @include grid
+}
+    .pictureGrid img{
+        width: $pictureSizePhone;
+        height: $pictureSizePhone;
+    }
+
+.buttonGrid{
+    @include grid
+}
+    .buttonGrid div{
+        width: $pictureSizePhone;
+        height: $pictureSizePhone;
+    }
+    
+@media (min-width: 700px){
+    .pictureGrid{
+        @include grid
+    }
+        .pictureGrid img{
+            width: $pictureSizeTablet;
+            height: $pictureSizeTablet;
+        }
+
+    .buttonGrid{
+        @include grid
+    }
+        .buttonGrid div{
+            width: $pictureSizeTablet;
+            height: $pictureSizeTablet;
+        }
+}
+
+@media (min-width: 1080px){
+    .pictureGrid{
+        @include grid
+    }
+        .pictureGrid img{
+            width: $pictureSizeDesktop;
+            height: $pictureSizeDesktop;
+        }
+
+    .buttonGrid{
+        @include grid
+    }
+        .buttonGrid div{
+            width: $pictureSizeDesktop;
+            height: $pictureSizeDesktop;
+        }
+}

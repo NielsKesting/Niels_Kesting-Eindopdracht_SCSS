@@ -1,0 +1,474 @@
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #c3cfe2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px auto 20px;
+      grid-template-columns: 20px auto 20px;
+      grid-template-areas: " . te . "  " . gr . ";
+}
+
+body .testimonial {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: te;
+}
+
+body .pictureGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: gr;
+}
+
+body .buttonGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: gr;
+}
+
+@media (min-width: 1080px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50px auto 50px auto 50px;
+        grid-template-columns: 50px auto 50px auto 50px;
+        grid-template-areas: " . te . gr . ";
+  }
+  body .testimonial {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: te;
+  }
+  body .pictureGrid {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: gr;
+  }
+  body .buttonGrid {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: gr;
+  }
+}
+
+.testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 70%;
+}
+
+.testimonial .testimonialBody {
+  font-size: 22px;
+  line-height: 1.6;
+  width: 350px;
+  padding: 20px 30px 50px 30px;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #fff;
+}
+
+.testimonial .testimonialFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  text-align: center;
+  width: 410px;
+  height: 160px;
+  padding-bottom: 15px;
+  border-radius: 0px 0px 25px 25px;
+  color: #fff;
+  background-color: #686de0;
+}
+
+.testimonial .testimonialFooter .subtitle {
+  color: #b8b9ec;
+}
+
+.testimonial .profilePicture {
+  position: relative;
+  top: -230px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.buttonGrid div {
+  background-color: #686de0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: off;
+          animation-name: off;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.buttonGrid > :hover {
+  -webkit-animation-name: on;
+          animation-name: on;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes on {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes on {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@-webkit-keyframes off {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes off {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.pictureGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.pictureGrid img {
+  width: 410px;
+  height: 410px;
+}
+
+.buttonGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.buttonGrid div {
+  width: 410px;
+  height: 410px;
+}
+
+@media (min-width: 700px) {
+  .pictureGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .pictureGrid img {
+    width: 40vw;
+    height: 40vw;
+  }
+  .buttonGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .buttonGrid div {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media (min-width: 1080px) {
+  .pictureGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .pictureGrid img {
+    width: 20vw;
+    height: 20vw;
+  }
+  .buttonGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .buttonGrid div {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+@-webkit-keyframes expand {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-192px);
+            transform: translateX(-192px);
+  }
+}
+
+@keyframes expand {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-192px);
+            transform: translateX(-192px);
+  }
+}
+
+@-webkit-keyframes colapse {
+  from {
+    -webkit-transform: translateX(-192px);
+            transform: translateX(-192px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes colapse {
+  from {
+    -webkit-transform: translateX(-192px);
+            transform: translateX(-192px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.socials {
+  position: absolute;
+  right: -192px;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  margin: 7px 0px 0px 20px;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+.twitter {
+  width: 220px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation-name: colapse;
+          animation-name: colapse;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #00aced;
+}
+
+.twitter:hover {
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.linkedin {
+  width: 220px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation-name: colapse;
+          animation-name: colapse;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #007bb6;
+}
+
+.linkedin:hover {
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.facebook {
+  width: 220px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation-name: colapse;
+          animation-name: colapse;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #3b5998;
+}
+
+.facebook:hover {
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.github {
+  width: 220px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation-name: colapse;
+          animation-name: colapse;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #333;
+}
+
+.github:hover {
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=styles.css.map */
