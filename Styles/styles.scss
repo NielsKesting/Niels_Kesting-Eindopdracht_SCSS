@@ -14,21 +14,8 @@ body{
     .buttonGrid{ grid-area: gr;}
     }
 
-@media (min-width: 1080px){
-    body{
-        display: grid;
-        grid-template-columns: 50px auto 50px auto 50px;
-        grid-template-areas:
-        " . te . gr . " ;
-    
-        .testimonial{ grid-area: te;}
-        .pictureGrid{ grid-area: gr;}
-        .buttonGrid{ grid-area: gr;}
-    }
-}
-
-$whiteBackground: #fff;
-$blue: #686de0;
+$testimonialBackground: #fff;
+$testimonialFooter-and-buttons: #686de0;
 
 @import "./testimonial";
 @import "./pictureGrid";

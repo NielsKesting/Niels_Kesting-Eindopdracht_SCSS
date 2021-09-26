@@ -1,25 +1,25 @@
 // Image size
 $pictureSizePhone: 410px;
 $pictureSizeTablet: 40vw;
-$pictureSizeDesktop: 20vw;
+$pictureSizeDesktop: 25vw;
 
 
 // Button animation
 .buttonGrid div{
-    background-color: $blue;
+    background-color: $testimonialFooter-and-buttons;
     display: flex;
     justify-content: center;
     align-items: center;
     animation-name: off;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
-}
-    .buttonGrid > :hover{
+
+    &:hover{
         animation-name: on;
         animation-duration: 300ms;
         animation-fill-mode: forwards;
     }
-
+}
 
 @keyframes on{
     from{ opacity: 0;}
@@ -36,56 +36,61 @@ $pictureSizeDesktop: 20vw;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;}
+    gap: 20px;
+}
 
 .pictureGrid{
-    @include grid
-}
-    .pictureGrid img{
-        width: $pictureSizePhone;
-        height: $pictureSizePhone;
-    }
+    @include grid;
 
-.buttonGrid{
-    @include grid
-}
-    .buttonGrid div{
+    img{
         width: $pictureSizePhone;
         height: $pictureSizePhone;
     }
+}
+.buttonGrid{
+    @include grid;
+
+    div{
+        width: $pictureSizePhone;
+        height: $pictureSizePhone;
+    }
+}
+
     
 @media (min-width: 700px){
     .pictureGrid{
-        @include grid
-    }
-        .pictureGrid img{
+        @include grid;
+    
+        img{
             width: $pictureSizeTablet;
             height: $pictureSizeTablet;
         }
-
+    }
     .buttonGrid{
-        @include grid
-    }
-        .buttonGrid div{
+        @include grid;
+    
+        div{
             width: $pictureSizeTablet;
             height: $pictureSizeTablet;
         }
+    }
 }
 
 @media (min-width: 1080px){
     .pictureGrid{
-        @include grid
-    }
-        .pictureGrid img{
+        @include grid;
+    
+        img{
             width: $pictureSizeDesktop;
             height: $pictureSizeDesktop;
         }
-
+    }
     .buttonGrid{
-        @include grid
-    }
-        .buttonGrid div{
+        @include grid;
+    
+        div{
             width: $pictureSizeDesktop;
             height: $pictureSizeDesktop;
         }
+    }
 }

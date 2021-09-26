@@ -10,7 +10,7 @@
         width: 350px;
         padding: 20px 30px 50px 30px;
         border-radius: 25px 25px 0px 0px;
-        background-color: $whiteBackground;    
+        background-color: $testimonialBackground;    
     }
    
     .testimonialFooter{
@@ -22,8 +22,8 @@
         height: 160px;
         padding-bottom: 15px; 
         border-radius: 0px 0px 25px 25px;
-        color: $whiteBackground;
-        background-color: $blue;
+        color: $testimonialBackground;
+        background-color: $testimonialFooter-and-buttons;
         
         .subtitle{
             color: rgb(184, 185, 236);
@@ -35,6 +35,6 @@
         top: -230px;
         width: 100px;
         border-radius: 50%;
-        border: 5px solid $whiteBackground;
+        border: 5px solid $testimonialBackground;
     }
 }

@@ -8,11 +8,13 @@
     animation-duration: 300ms;
     animation-fill-mode: forwards;
 }
+
 @mixin expand{
     animation-name: expand;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
 }
+
     @keyframes expand{
         from{transform: translateX(0px)}
         to{ transform: translateX(-192px)}
@@ -26,49 +28,57 @@
 .socials{
     position: absolute;
     right: -192px;
-}
-    .socials img{
+
+    img{
         width: 30px;
         height: 30px;
     }
-    .socials a{
+
+    a{
         text-decoration: none;
         color: white;
         margin: 7px 0px 0px 20px;
-    }
-        .socials a:hover{
+    
+        &:hover{
             text-decoration: underline;
         }
+    }
+}
 
 // Individual button style
 .twitter{
     @include socialStyle;
     background-color: #00aced;
-}
-    .twitter:hover{
+
+    &:hover{
         @include expand;
     }
+}
+
 
 .linkedin{
     @include socialStyle;
     background-color: #007bb6;
-}
-    .linkedin:hover{
+
+    &:hover{
         @include expand;
     }
+}
 
 .facebook{
     @include socialStyle;
     background-color: #3b5998; 
-}
-    .facebook:hover{
+
+    &:hover{
         @include expand;
     }
+}
 
 .github{
     @include socialStyle;
     background-color: #333;
-}
-    .github:hover{
+
+    &:hover{
         @include expand;
     }
+}
